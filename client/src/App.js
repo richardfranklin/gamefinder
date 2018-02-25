@@ -26,7 +26,7 @@ class App extends Component {
 
   /* ==================== callApi  ==================== */
   callApi = async (querys) => {
-    const response = await fetch(`/api/test?game=${this.state.game}`);
+    const response = await fetch(`/search?game=${this.state.game}`);
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
